@@ -1,0 +1,344 @@
+.header {
+
+    /* width: inherit;    first change  */ 
+    max-width: 1100px;
+    margin: auto;
+    
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 0%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    color: #ffffff;
+    background: linear-gradient(180deg, #13F1FC -7.67%, #04B2F4 40.97%, #0470DC 84.81%);
+
+
+}
+
+.box {
+    width: 650px;
+    /* width: 50%; */
+    /* height: 500px; */
+    height: auto;
+    border-radius: 3%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.starting {
+    display: flex;
+    align-items: center;
+}
+
+.img {
+    width: 30%;
+    /* height: 200px; */
+    margin-left: 10%;
+    margin-top: 5%;
+
+}
+
+.text {
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.main {
+    margin-top: 5%;
+    text-align: justify;
+    margin-left: 50px;
+}
+
+input{
+    width: 70%;
+    padding: 1rem;
+    /* padding-inline: 5%; */
+    /* padding-top: 3%; */
+    /* padding-bottom: 3%; */
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-left: 3rem;
+    margin-right: 30px;
+    font-size: 100%;
+}
+
+
+
+
+
+button {
+    /* background:  linear-gradient(180deg, #000000 0%, #FF16DA 80.83%); */
+    /* background:  rgb(4, 55, 61); */
+    background: linear-gradient(90.09deg, #13F1FC 9.41%, #04B2F4 51.86%, #0470DC 90.11%);
+    border: none;
+    padding: 1rem 4rem 1rem 4rem;
+    box-shadow: 0 1px 18px #69f0ff;
+    border-radius: 0.25rem;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.display {
+    font-size: 1.5rem;
+
+}
+
+
+.lucky {
+    display: flex;
+    justify-content: center;
+
+}
+
+.output-text{
+    margin-right: 20%;
+}
+
+/* .lucky-img{
+
+width: 1%;
+margin-left: 2%;
+
+} */
+
+
+/* ======CSS for Footer======== */
+
+.footer-box{
+    /* width:inherit; */
+    width:100%;
+    /* height: 180px; */
+    height: 25vh;
+    border: black;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align: center;
+}
+
+.footer-h1{
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.social-icons{
+    /* width: 3%; */
+    width: 1.5rem;
+    padding-inline: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px){
+
+    .header{
+        margin: auto;
+    }
+
+    .box {
+        box-shadow: none;
+        width: fit-content;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px ;
+    }
+
+    .starting{
+        flex-direction: column;
+    }
+
+    input{
+        margin-left: 0.2rem;
+    }
+
+    .lucky {
+        flex-direction:column;
+        justify-content: center;
+        text-align:center;
+        
+    
+    }
+
+    .footer-box{
+        margin: auto;
+    }
+
+    .social-icons{
+        /* width: 6%; */
+        /* padding-inline: 1rem; */
+    }
+
+    .footer-h1{
+        margin-top: 5%;
+    }
+
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+const buy = document.querySelector(".ip1");
+const qty = document.querySelector(".ip2");
+const sell = document.querySelector(".ip3");
+const cal = document.querySelector(".btn-submit");
+const display = document.querySelector(".display");
+const box = document.querySelector(".box")
+const error = document.querySelector(".error")
+
+
+
+function is_valid_Input()
+{
+    if (buy.value === "" || qty.value === "" || sell.value === "") 
+    {
+        setError("Please enter all the values");
+    }
+    else if (Number(buy.value)<= 0 || Number(qty.value)<= 0 || Number(sell.value)<= 0  ) 
+    {
+        setError("Please enter valid values. Values should be greater than Zero");
+    } 
+    else 
+    {
+        return true;
+    }
+}
+
+function setError(errorText)
+{
+    error.style.display = "initial";
+    error.innerText = errorText;
+}
+
+function resetError()
+{
+    error.innerHTML = "hi";
+}
+
+function resetOutput()
+{
+    box.style.background = "white";
+    display.innerText ="";
+}
+
+
+
+function calculateProfitandloss() {
+    let a = Number(buy.value);
+    let b = Number(qty.value);
+    let c = Number(sell.value);
+
+    let d = a * b;
+    let e = b * c;
+
+    let p = (e - d).toFixed(2);
+    // console.log(p);
+
+    let pandl = (((e - d) / d) * 100).toFixed(2);
+    // console.log(pandl +"%");
+
+
+    if (e > d) {
+        // console.log(p+"dghfh");
+        // display.innerHTML = "The Profit is " + p + " and the profit percentage is " + pandl +" %"; Happy_Gelatin.webp
+
+        display.innerHTML = `<div class = "lucky"><div class = "lucky-img"><img src='./Happy_Gelatin.webp' style="width: 50%; "></div><div class:"output-text"  style="margin:auto; margin-right:15%; margin-left:15%; padding : 1rem; font-size: 1.4rem;">The Profit is ${p} and the profit percentage is  ${pandl}%</div></div>`;
+        // display.innerHTML = `<div class = "lucky"><div class = "lucky-img"><img src='./emojisky.com-12822245.png' style="width: 60%; "></div><div style="margin:auto; margin-right:20%; font-size: 1.4rem;">The Profit is ${p} and the profit percentage is  ${pandl} %</div></div>`;
+        if (pandl >= 50) {
+            box.style.background = "#32Cd32";
+        }
+
+    }
+
+    else if (e < d)  {
+        // display.innerHTML = "The Loss is " + p + " and the loss percentage is " + pandl +" %";
+
+        display.innerHTML = `<div class = "lucky"><div class = "lucky-img"><img src='./Sad_Gelatin.webp' style="width: 50%; "></div><div class:"output-text"  style="margin:auto; margin-right:15%; margin-left:15%; padding : 1rem; font-size: 1.4rem;">The Loss is ${p} and the loss percentage is  ${pandl}%</div></div>`;
+        if (pandl < 0) {
+            box.style.background = "#EF4444";
+        }
+    }
+
+
+    // new changes--->
+
+    else 
+    {
+        if (e = d) 
+        {
+        display.innerHTML = `<div class = "lucky"><div class = "lucky-img"><img src='./Neutral_Gelatin.webp' style="width: 50%; "></div><div class:"output-text" style="margin:auto; margin-right:15%; margin-left:15%; padding : 1rem; font-size: 1.4rem;">You earned No profit No loss</div></div>`;
+        box.style.background = "#FBBF24";
+        }
+    }
+    
+    // <---------
+
+
+    // return pandl + "%"; ./emojisky.com-6045.png
+    // outputbox.innerHTML = `<div class = "lucky"><div class = "lucky-img"><img src='./emojisky.com-12822245.png'></div><div style="margin:auto; margin-right:40%; font-size: 1.4rem;">Yayy! Your birthday is lucky :)</div></div>`;
+
+}
+
+function after_Submit()
+{
+    resetError();
+    resetOutput();
+
+    if(is_valid_Input)
+    {
+        calculateProfitandloss();
+    }
+
+
+}
+
+cal.addEventListener("click", after_Submit);
+
+
+
+buy.addEventListener("click", function(){
+    resetError();
+    resetOutput();
+});
+
+qty.addEventListener("click", function(){
+    resetError();
+    resetOutput();
+});
+
+sell.addEventListener("click", function(){
+    resetError();
+    resetOutput();
+});
+
+
+ */
