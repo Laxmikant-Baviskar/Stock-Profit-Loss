@@ -5,7 +5,7 @@
 
 ## 📍 Repo : https://github.com/Laxmikant-Baviskar/Stock-Profit-Loss
 
-#### What does this app do?
+### ⏩ What does this app do?
 
 #### ● This app takes the following input : 
 
