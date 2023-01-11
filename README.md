@@ -1,21 +1,24 @@
 # Stock-Profit-Loss
 Built using Vanilla JS, HTML and CSS
 
+📍 Demo : https://stock-profit-loss-laxmikant.netlify.app/
+📍 Repo : https://github.com/Laxmikant-Baviskar/Stock-Profit-Loss
+
 What does this app do?
 
 ● This app takes the following input : 
 
-→ user's stock price at the time of Buy
+  → user's stock price at the time of Buy
 
-→ total  quantity of stock
+  → total  quantity of stock
 
-→sell price of the stock
+  →sell price of the stock
 
 ●  Output :
 
-→ Calculate profit or loss and the profit or loss percentage
+  → Calculate profit or loss and the profit or loss percentage
 
-→ The app changes the theme of the app if the profit or loss percentage is greater than 50%
+  → The app changes the theme of the app if the profit or loss percentage is greater than 50%
 
 ● Snapshot of App ↓
 
