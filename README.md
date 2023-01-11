@@ -1,8 +1,9 @@
 # Stock-Profit-Loss
-Built using Vanilla JS, HTML and CSS
+## 🛠 Built using Vanilla JS, HTML and CSS
 
-📍 Demo : https://stock-profit-loss-laxmikant.netlify.app/
-📍 Repo : https://github.com/Laxmikant-Baviskar/Stock-Profit-Loss
+## 📍 Demo : https://stock-profit-loss-laxmikant.netlify.app/
+
+## 📍 Repo : https://github.com/Laxmikant-Baviskar/Stock-Profit-Loss
 
 What does this app do?
 
