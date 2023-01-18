@@ -23,4 +23,4 @@
 
 #### ● Snapshot of App ↓
 
-![image](https://user-images.githubusercontent.com/99134289/183124732-c9f309a5-365d-4b51-95c8-a8629484933f.png)
+![image](https://user-images.githubusercontent.com/99134289/183124732-c9f309a5-365d-4b51-95c8-a8629484933f.png) 
